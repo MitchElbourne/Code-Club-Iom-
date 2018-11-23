@@ -1,20 +1,27 @@
 <?php
-/**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- */
 get_header();
 ?>
 
-<!-- blog title -->
-
-
+<!-- Splash Section -->
+<section id="splash" class="splash-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="splash-content">
+          <div class="splash-banner">
+            <img class="small-screen" src="<?php echo get_theme_file_uri('assets/images/Splash Image/splash-image-small-top@2x.png'); ?>" alt="banner">
+          </div>
+          <h1 class="title">Come and learn to code</h1>
+          <div class="splash-banner">
+            <img class="large-screen" src="<?php echo get_theme_file_uri('assets/images/Splash Image/splash-image-large@2x.png'); ?>" alt="banner">
+            <img class="medium-screen" src="<?php echo get_theme_file_uri('assets/images/Splash Image/splash-image-medium@2x.png'); ?>" alt="banner">
+            <img class="small-screen" src="<?php echo get_theme_file_uri('assets/images/Splash Image/splash-image-small-bottom@2x.png'); ?>" alt="banner">
+          </div>
+        </div>
+      </div><!-- col -->
+    </div><!-- row -->
+  </div><!-- container-fluid -->
+</section><!-- welcome to bni -->
 
 
 

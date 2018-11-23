@@ -18,9 +18,6 @@
       <div class="header-container">
         <div class="clearfix top"></div>
 
-
-
-
         <!-- Navigation -->
         <nav class="navbar navbar-light navbar-expand-sm fixed-top" id="mainNav">
           <div class="container">

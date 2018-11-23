@@ -1,5 +1,6 @@
 <!-- Footer -->
 <!-- SECTION : Contact -->
+<?php // TODO: Pull menu items from WP menu ?>
   <section id="contact" class="contact-section">
     <div class="container">
       <div class="row">
@@ -12,7 +13,7 @@
           <div class="item feed">
             <h5 class="title">Feed</h5>
             <a href="<?php echo esc_url('https://www.google.com/calendar/ical/1do5ep6up9hmu0hcejef2r8dfg%40group.calendar.google.com/public/basic.ics'); ?>">Calendar Feed</a>
-            <?php // BUG: Fix feed ?>
+            <?php // BUG: Fix feed url ?>
             <a href="<?php echo esc_url(home_url('/feed')); ?>">News RSS Feed</a>
           </div><!-- feed -->
         </div><!-- col -->
