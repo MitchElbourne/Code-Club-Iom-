@@ -581,7 +581,6 @@ footer {
 
 .splash-section {
   padding-top: 24px;
-  margin-top: 104px;
 }
 
 @media (max-width: 767px) {
@@ -621,6 +620,8 @@ footer {
   }
   .splash-section .splash-content .splash-banner img.small-screen {
     display: block;
+    max-width: 75%;
+    margin: 0 auto 0 auto;
   }
 }
 
