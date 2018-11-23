@@ -31,13 +31,13 @@ get_header();
 <?php
   $recentPosts = new WP_Query(array(
     'post_type' => 'post',
-    'post_count' => 9,
+    'posts_per_page' => 9,
     'post_order' => "ASC"
   ));
 
 
   // TODO: Use a better method for retreiving first post
-  // Variable used fr retreiving the first post from the array
+  // Variable used for retreiving the first post from the array
   $postcount = 0;
   while ($recentPosts->have_posts()) {
     $recentPosts->the_post();
@@ -46,17 +46,20 @@ get_header();
       <article class="post-item first-post">
         <div class="post-thumbnail">
           <div class="ratio-container">
-            <div class="ratio-content" style="background-image: url('imgs/lets-get-kids-coding.png');"></div>
+            <div class="ratio-content" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
           </div>
-          <a href="javascript:;" class="post-overlay"></a>
+          <a href="<?php the_permalink(); ?>" class="post-overlay"></a>
         </div><!-- post-thumbnail -->
         <div class="post-categories">
           <a href="javascript:;">Classes</a> |
           <a href="javascript:;">News</a>
+          <?php $category = get_the_category();
+          
+          ?>
         </div><!-- post-categories -->
-        <a href="javascript:;" class="post-title">New Scratch Season, Cybersecurity and lots more</a><!-- post-title -->
+        <a href="<?php the_permalink(); ?>" class="post-title"><?php the_title(); ?></a><!-- post-title -->
         <div class="post-content">
-          <p>Everyone’s back from the Summer holidays and getting ready for the next scholastic year, so we though it would be a good time to organise a new Scratch class. This is a beginner’s class, starting Saturday 8th September at 16:00, aimed at 8 to 12 year olds who have never coded before and are looking for a fun way to start learning.</p>
+          <p><?php echo wp_trim_words(get_the_content(), 55); ?></p>
         </div><!-- post-content -->
 
         <div class="post-meta">
@@ -68,13 +71,14 @@ get_header();
           </div>
         </div><!-- post-meta -->
       </article><!-- article -->
+      <div class="row">
     <?php  $postcount++;
-    } else {
+    } else { ?>
 
-    }
+    <?php }
   }
 ?>
-
+      </div><!-- row -->
     </div><!-- row -->
   </div><!-- container -->
 </section><!-- SECTION : News & Events -->
