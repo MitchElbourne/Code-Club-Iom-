@@ -1,0 +1,22 @@
+
+//=================Fonts===================
+@mixin font-face($font-name, $fonts-path, $fonts-version) {
+  font-family: $font-name;
+  src:  url('#{$fonts-path}.eot?#iefix#{$fonts-version}') format('embedded-opentype'),
+        // url('#{$fonts-path}.otf#{$fonts-version}') format('opentype'),
+        url('#{$fonts-path}.woff#{$fonts-version}') format('woff'),
+        url('#{$fonts-path}.ttf#{$fonts-version}') format('truetype'),
+        url('#{$fonts-path}.svg##{$font-name}#{$fonts-version}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@each $prop, $abbrev in (width: w, height: h) {
+  @each $size, $length in $sizes {
+    .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
+  }
+}
+
+.mw-100 { max-width: 100% !important; }
+.mh-100 { max-height: 100% !important; }

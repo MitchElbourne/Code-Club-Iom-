@@ -1,0 +1,83 @@
+//
+// Variables
+// --------------------------------------------------
+//== Colors
+//
+$white:         #ffffff !default;
+$black:         #344452 !default;
+$charcoal-grey: #384648 !default;
+
+// Grey
+$cool-grey: #9ba3a3 !default;
+$light-grey: #f5f6f6 !default;
+$silver-two: #cdd1d1 !default;
+
+
+// Green
+$booger: #86a93d !default;
+
+//
+
+$mango: #ff932c !default;
+
+$basic-color-text: #384648 !default;
+$base-line-color: rgba(34,34,34,0.25);
+
+
+//##
+//
+
+$spacer: 1rem !default; //== Fonts
+
+$font-size-base1: 48px !default;
+$font-size-base2: 36px !default;
+$font-size-base3: 30px !default;
+$font-size-base4: 24px !default;
+$font-size-base5: 18px !default;
+$font-size-base6: 15px !default;
+
+$base-line-height-h1: 1.25 !default; //
+$base-line-height-h2: 1.33 !default; //
+$base-line-height-h3: 1.4 !default;  //
+$base-line-height-h4: 1.5 !default;  //
+$base-line-height-h5: 1.33 !default; //
+$base-line-height-h6: 1.2 !default;  //
+
+$font-size-h1: 48px !default;
+$font-size-h2: 36px !default;
+$font-size-h3: 30px !default;
+$font-size-h4: 24px !default;
+$font-size-h5: 18px !default;
+$font-size-h6: 15px !default;
+$headings-margin-bottom: ($spacer / 2) !default;
+$headings-line-height-h1: 1.25 !default;
+$headings-line-height-h2: 1.33 !default;
+$headings-line-height-h3: 1.4 !default;
+$headings-line-height-h4: 1.5 !default;
+$headings-line-height-h5: 1.33 !default;
+$headings-line-height-h6: 1.2 !default;
+$headings-color: $charcoal-grey !default;
+
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px ); // Paragraphs
+
+
+//== Scaffolding
+//## Settings for some of the most global styles.
+$Montserrat: 'Montserrat', sans-serif;
+$Nunito: 'Nunito', sans-serif;
+$fonts-version: '?v=1.0.0.0';
+
+
+//
+// Style p element.
+$paragraph-margin-bottom: 2rem !default; // Assumes the browser default, typically `20px`
+$font-size-base: 1.25rem !default;
+
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+) !default;

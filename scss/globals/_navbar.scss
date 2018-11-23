@@ -1,0 +1,82 @@
+.navbar {
+  @include media-breakpoint-up(md) {
+    min-height: 84px;
+    padding: 0 1rem;
+  }
+  @include media-breakpoint-down(md) {
+    //box-shadow: 0 4px 8px 0 rgba(52, 64, 75, 0.16);
+    //-webkit-backface-visibility: hidden;
+    //-webkit-transform: translate3d(0,0,0);
+  }
+  &.fixed-top {
+    background-color: $white;
+  }
+  &.navbar-shrink {
+    box-shadow: 0 4px 8px 0 rgba(52, 64, 75, 0.16);
+  }
+  .navbar-brand {
+    padding: 24px 0px;
+    @include media-breakpoint-down(sm) {
+      padding: 5px;
+    }
+    img {
+      max-width: 224px;
+      width: 100%;
+      max-height: 56px;
+      @include media-breakpoint-down(md) {
+        max-width: 192px;
+      }
+      @include media-breakpoint-down(sm) {
+        max-width: 96px;
+      }
+    }
+  }
+  ul {
+    @include media-breakpoint-down(md) {
+      margin: 16px 0;
+    }
+    li {
+      a {
+        font-size: 14px;
+        line-height: 32px;
+        letter-spacing: 1px;
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+        color: $charcoal-grey;
+        &:hover, &:focus {
+          transition: all 0.25s ease-out;
+          color: $booger;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 13px;
+        }
+        @include media-breakpoint-up(lg) {
+          padding: 36px 16px;
+        }
+      }
+    }
+  }
+  .navbar-toggler{
+    padding: 8px;
+    border-radius: 0;
+    border: none;
+    color: $booger;
+    span{
+      font-size: 12px;
+      line-height: 24px;
+      font-family: $Montserrat;
+      font-weight: 700;
+      font-style: normal;
+      text-transform: uppercase;
+    }
+    i{
+      border: 2px solid $booger;
+      padding: 2px;
+      width: 20px;
+      height: 20px;
+      font-size: 13px;
+    }
+  }
+}

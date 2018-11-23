@@ -1,0 +1,19 @@
+/*
+ Theme Name:   One Page Child
+ Description:  One Page Child Theme
+ Author:       Mitchell Elbourne
+ Template:     one-page
+ Version:      1.0.0
+ Text Domain:  one-page-child
+*/
+
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "base/typography";
+@import "globals/globals";
+@import "globals/navbar";
+@import "globals/footer";
+@import "components/buttons";
+@import "components/fonts";
+@import "components/input";
+@import "templates/01-home";

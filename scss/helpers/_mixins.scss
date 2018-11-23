@@ -1,0 +1,47 @@
+// Flexbox Mixins
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+%flexbox {
+  @include flexbox;
+}
+
+
+
+// Utilities
+@import "mixins/breakpoints";
+@import "mixins/fonts";
+@import "mixins/linear-gradient";
+
+// ==
+
+@mixin content-left{
+  @include media-breakpoint-up(xl) {
+    padding-left: calc((100vw - 1140px) / 2);
+  }
+  @include media-breakpoint-down(lg) {
+    padding-left: calc((100vw - 940px) / 2);
+  }
+  @include media-breakpoint-down(md) {
+    padding-left: calc((100vw - 720px) / 2);
+  }
+}
+
+@mixin content-right{
+  @include media-breakpoint-up(xl) {
+    padding-right: calc((100vw - 1140px) / 2);
+  }
+  @include media-breakpoint-down(lg) {
+    padding-right: calc((100vw - 940px) / 2);
+  }
+  @include media-breakpoint-down(md) {
+    padding-right: calc((100vw - 720px) / 2);
+  }
+}

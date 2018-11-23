@@ -1,0 +1,35 @@
+.cta{
+  border: none;
+  border-radius: 0;
+  color: $white;
+  padding: 12px 32px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: $Montserrat;
+  font-weight: 700;
+  font-style: normal;
+  border-radius: 24px;
+}
+.cta-subscribe{
+  background-color: $booger;
+  &:hover, &:focus {
+    background-color: darken($booger, 15%);
+    transition: background-color 0.25s ease-out;
+  }
+  &:active {
+    color: darken($white, 20%);
+    background-color: darken($booger, 25%);
+  }
+}
+
+.cta-donate{
+  background-color: $mango;
+  &:hover, &:focus {
+    background-color: darken($mango, 15%);
+    transition: background-color 0.25s ease-out;
+  }
+  &:active {
+    color: darken($white, 20%);
+    background-color: darken($mango, 25%);
+  }
+}
