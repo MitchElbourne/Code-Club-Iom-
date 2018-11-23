@@ -11,37 +11,14 @@
  */
 get_header();
 ?>
-<!-- blog title -->
-<div class="clear"></div>
-<!-- blog title ends -->
-<div class="blog_pages_wrapper default_bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <?php
-                if (have_posts()) {
-                    while (have_posts()) {
-                        the_post();
-                        get_template_part('templates/content');
-                    }
-                } else {
-                    ?>
-                    <div class="post">
-                        <p>
-                            <?php _e('Sorry, no posts matched your criteria.', 'one-page'); ?>
-                        </p>
-                    </div>
-                <?php } ?>
-                <div class="clear"></div>
-                <nav id="nav-single"> <span class="nav-previous">
-                      <?php next_posts_link(__('&larr; Previous posts', 'one-page')); ?>
-                  </span> <span class="nav-next">
-                      <?php previous_posts_link(__('Newer posts &rarr;', 'one-page')); ?>
-                  </span> </nav>
 
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-</div>
-<?php get_footer(); ?>
+<!-- blog title -->
+
+
+
+
+
+
+<?php
+get_footer();
+?>

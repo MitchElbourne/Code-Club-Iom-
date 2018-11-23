@@ -23,7 +23,7 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-light navbar-expand-sm fixed-top" id="mainNav">
-          <div class="container-fluid">
+          <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-controls="navbarResponsive" aria-label="Toggle Navigation">
@@ -36,11 +36,12 @@
               <?php
           		wp_nav_menu(array(
           			'menu'              => 'Menu 1',
-          			'depth'             => 1,
+          			'depth'             => 0,
           			'container'         => 'div',
           			'container_class'   => 'collapse navbar-collapse',
           			'container_id'      => 'navbarResponsive',
           			'menu_class'        => 'nav navbar-nav',
+                'walker'            => new WP_Bootstrap_Navwalker(),
           		));
           		?>
             </div><!-- /.container-fluid -->
