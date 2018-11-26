@@ -1,4 +1,8 @@
 /* SECTION : News & Events */
+.blog-articles {
+  display: flex;
+  flex-wrap: wrap;
+}
 .post-item {
   position: relative;
   @include flexbox;
@@ -163,6 +167,7 @@
     }
   }
 }
+
 
 .splash-section {
   padding-top: 24px;

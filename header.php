@@ -27,7 +27,7 @@
                 <span>More</span>
                 <i class="fas fa-bars"></i>
               </button>
-              <a class="navbar-brand" href="#"><img src="<?php echo get_theme_file_uri('/assets/images/codeclub-iom-logo.svg'); ?>"/></a>
+              <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><img src="<?php echo get_theme_file_uri('/assets/images/codeclub-iom-logo.svg'); ?>"/></a>
             </div>
             <!-- Navigation Links and Box -->
               <?php

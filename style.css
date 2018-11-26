@@ -407,6 +407,11 @@ footer {
 }
 
 /* SECTION : News & Events */
+.blog-articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .post-item {
   position: relative;
   display: -webkit-box;

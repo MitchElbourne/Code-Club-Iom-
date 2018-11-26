@@ -41,12 +41,19 @@ get_header();
   $postcount = 0;
   while ($recentPosts->have_posts()) {
     $recentPosts->the_post();
+    $date = date('d.m.y', strtotime(get_the_date()));
+    $image;
+    if (!get_the_post_thumbnail_url()) {
+      $image = get_theme_file_uri('assets/images/lets-get-kids-coding.png');
+    } else {
+      $image = get_the_post_thumbnail_url();
+    }
 
     if ($postcount == 0) { ?>
       <article class="post-item first-post">
         <div class="post-thumbnail">
           <div class="ratio-container">
-            <div class="ratio-content" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
+            <div class="ratio-content" style="background-image: url('<?php echo $image; ?>')"></div>
           </div>
           <a href="<?php the_permalink(); ?>" class="post-overlay"></a>
         </div><!-- post-thumbnail -->
@@ -65,20 +72,55 @@ get_header();
           <a href="<?php echo the_permalink(); ?>" class="cta cta-read-more">Read more</a>
           <div class="post-meta-content pull-right">
             <a href="<?php echo get_author_posts_url($post->post_author); ?>" class="post-author"><img src="<?php echo get_theme_file_uri('/assets/images/Icons/icon-pen.svg'); ?>" alt="icon"><?php the_author(); ?></a>
-            <a class="post-date"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-calendar.svg'); ?>" alt="icon"> 01.09.18</a>
+            <a class="post-date"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-calendar.svg'); ?>" alt="icon"><?php echo $date; ?></a>
             <a href="<?php echo the_permalink(); ?>" class="post-comments has-comment"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-comment0.svg'); ?>" alt="icon"><?php echo get_comments_number(); ?></a>
           </div>
         </div><!-- post-meta -->
       </article><!-- article -->
-      <div class="row">
+      <div class="row blog-articles">
     <?php  $postcount++;
     } else { ?>
 
+      <!-- Individual Blog Posts -->
+      <div class="col-md-6">
+        <article class="post-item">
+          <div class="post-thumbnail">
+            <div class="ratio-container">
+              <div class="ratio-content" style="background-image: url('<?php echo $image; ?>');"></div>
+            </div>
+            <a href="<?php echo get_the_permalink(); ?>" class="post-overlay"></a>
+          </div><!-- post-thumbnail -->
+          <div class="post-categories">
+            <?php
+            the_category();
+            ?>
+          </div><!-- post-categories -->
+          <a href="<?php echo get_the_permalink(); ?>" class="post-title"><?php the_title(); ?></a><!-- post-title -->
+          <div class="post-meta">
+            <div class="post-meta-content">
+              <a href="<?php echo get_author_posts_url($post->post_author); ?>" class="post-author"><img src="<?php echo get_theme_file_uri('/assets/images/Icons/icon-pen.svg'); ?>" alt="icon"><?php the_author(); ?></a>
+              <a class="post-date"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-calendar.svg'); ?>" alt="icon"><?php echo $date; ?></a>
+              <a href="<?php echo the_permalink(); ?>" class="post-comments has-comment"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-comment0.svg'); ?>" alt="icon"><?php echo get_comments_number(); ?></a>
+            </div>
+          </div><!-- post-meta -->
+          <div class="post-content">
+            <p><?php echo wp_trim_words(get_the_content(), 35); ?></p>
+          </div><!-- post-content -->
+        </article><!-- article -->
+      </div>
     <?php }
   }
 ?>
+        </div><!-- row -->
       </div><!-- row -->
-    </div><!-- row -->
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 upcoming-events">
+        <div class="search-box">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <span class="input-group-btn"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-search.svg'); ?>" alt="icon"></span>
+          </div>
+        </div><!-- search-box -->
+      </div><!-- col --><!-- upcoming-events -->
   </div><!-- container -->
 </section><!-- SECTION : News & Events -->
 
