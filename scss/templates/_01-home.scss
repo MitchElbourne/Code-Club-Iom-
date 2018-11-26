@@ -87,15 +87,27 @@
   .post-categories {
     text-transform: uppercase;
     color: $booger;
-    font-size: 12px;
     margin-top: 16px;
-    a {
-      color: $booger;
-      line-height: 16px;
-      letter-spacing: 1px;
-      font-family: $Montserrat;
-      font-weight: 700;
-      font-style: normal;
+    display: flex;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        &:last-of-type {
+          border: none;
+        }
+        border-right: 1px solid rgba(black, 0.2);
+        padding: 0 0.5rem;
+        a {
+          font-size: 12px;
+          color: $booger;
+          line-height: 16px;
+          letter-spacing: 1px;
+          font-family: $Montserrat;
+          font-weight: 700;
+          font-style: normal;
+        }
+      }
     }
   }
   .post-title {
@@ -136,6 +148,9 @@
             margin: 0 5px;
           }
         }
+      }
+      &.post-date {
+        cursor: default;
       }
       .has-comment {
         color: $booger;

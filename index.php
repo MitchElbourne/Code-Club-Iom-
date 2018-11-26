@@ -51,10 +51,8 @@ get_header();
           <a href="<?php the_permalink(); ?>" class="post-overlay"></a>
         </div><!-- post-thumbnail -->
         <div class="post-categories">
-          <a href="javascript:;">Classes</a> |
-          <a href="javascript:;">News</a>
-          <?php $category = get_the_category();
-          
+          <?php
+          the_category();
           ?>
         </div><!-- post-categories -->
         <a href="<?php the_permalink(); ?>" class="post-title"><?php the_title(); ?></a><!-- post-title -->
@@ -62,12 +60,13 @@ get_header();
           <p><?php echo wp_trim_words(get_the_content(), 55); ?></p>
         </div><!-- post-content -->
 
+        <?php // TODO: Configure Post-Meta ?>
         <div class="post-meta">
-          <a href="javascript:;" class="cta cta-read-more">Read more</a>
-          <div class="post-meta-content float-right">
-            <a href="javascript:;" class="post-author"><img src="imgs/Icons/icon-pen.svg" alt="icon"> Owen Cutajar</a>
-            <a href="javascript:;" class="post-date"><img src="imgs/Icons/icon-calendar.svg" alt="icon"> 01.09.18</a>
-            <a href="javascript:;" class="post-comments has-comment"><img src="imgs/Icons/icon-comment0.svg" alt="icon"> 12</a>
+          <a href="<?php echo the_permalink(); ?>" class="cta cta-read-more">Read more</a>
+          <div class="post-meta-content pull-right">
+            <a href="<?php echo get_author_posts_url($post->post_author); ?>" class="post-author"><img src="<?php echo get_theme_file_uri('/assets/images/Icons/icon-pen.svg'); ?>" alt="icon"><?php the_author(); ?></a>
+            <a class="post-date"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-calendar.svg'); ?>" alt="icon"> 01.09.18</a>
+            <a href="<?php echo the_permalink(); ?>" class="post-comments has-comment"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-comment0.svg'); ?>" alt="icon"><?php echo get_comments_number(); ?></a>
           </div>
         </div><!-- post-meta -->
       </article><!-- article -->

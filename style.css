@@ -511,11 +511,26 @@ footer {
 .post-item .post-categories {
   text-transform: uppercase;
   color: #86a93d;
-  font-size: 12px;
   margin-top: 16px;
+  display: flex;
 }
 
-.post-item .post-categories a {
+.post-item .post-categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item .post-categories ul li {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 0.5rem;
+}
+
+.post-item .post-categories ul li:last-of-type {
+  border: none;
+}
+
+.post-item .post-categories ul li a {
+  font-size: 12px;
   color: #86a93d;
   line-height: 16px;
   letter-spacing: 1px;
@@ -569,6 +584,10 @@ footer {
   .post-item .post-meta a.post-author:after, .post-item .post-meta a.post-date:after {
     margin: 0 5px;
   }
+}
+
+.post-item .post-meta a.post-date {
+  cursor: default;
 }
 
 .post-item .post-meta a .has-comment {
