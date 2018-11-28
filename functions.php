@@ -22,12 +22,10 @@ function enqueue_theme_scripts_styles () {
   wp_register_script('jquery', "https://code.jquery.com/jquery-3.3.1.slim.min.js", array('jquery'), false, true);
   wp_register_script('popper', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js", array('jquery'), false, true);
   wp_register_script('tether', "https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js", array('jquery'), false, true);
-  wp_register_script('lodash', "https://cdn.jsdelivr.net/npm/lodash.debounce@4.0.8/index.js", array('jquery'), false, true);
 
 
   // Enqueue the scripts
   wp_enqueue_script('jquery');
-  wp_enqueue_script('lodash');
   // wp_enqueue_script('popper');
   // wp_enqueue_script('tether');
 
@@ -38,7 +36,7 @@ function enqueue_theme_scripts_styles () {
 // Retrieve the NavWalker file and load as a template
 get_template_part('navwalker4');
 // Hide the admin bar
-// TODO: Reintroduce after development
+// TODO: Reintroduce admin bar after development
 show_admin_bar(false);
 // Action the scrips/styles to the page with priority 99 to place it after the main css
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts_styles', 99);

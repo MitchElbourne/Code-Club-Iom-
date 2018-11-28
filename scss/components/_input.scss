@@ -16,10 +16,13 @@
 }
 .search-box {
   .input-group {
-    max-width: 350px;
     display: inline-block;
     position: relative;
     z-index: 1;
+    width: 100%;
+    @include media-breakpoint-down(lg) {
+      width: 50%;
+    }
 
     .form-control {
       width: 100%;

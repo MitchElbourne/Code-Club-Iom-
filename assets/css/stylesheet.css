@@ -374,10 +374,16 @@ footer {
 }
 
 .search-box .input-group {
-  max-width: 350px;
   display: inline-block;
   position: relative;
   z-index: 1;
+  width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .search-box .input-group {
+    width: 50%;
+  }
 }
 
 .search-box .input-group .form-control {
@@ -803,15 +809,6 @@ footer {
   display: block;
   font-size: 14px;
   line-height: 24px;
-}
-
-@media (min-width: 768px) {
-  .contact-section .sign-up .first-name {
-    padding-right: 2px;
-  }
-  .contact-section .sign-up .last-name {
-    padding-left: 2px;
-  }
 }
 
 .contact-section .help-us .cta-donate {

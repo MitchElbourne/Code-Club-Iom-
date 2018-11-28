@@ -328,14 +328,6 @@
       font-size: 14px;
       line-height: 24px;
     }
-    @include media-breakpoint-up(md) {
-      .first-name {
-        padding-right: 2px;
-      }
-      .last-name {
-        padding-left: 2px;
-      }
-    }
   }
   .help-us {
     .cta-donate {
