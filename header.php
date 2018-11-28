@@ -1,6 +1,3 @@
-<?php
-// The Header for the One-Page-Child Theme
-?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
   <head>
@@ -20,12 +17,12 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-light navbar-expand-sm fixed-top" id="mainNav">
-          <div class="container">
+          <div class="container nav-container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-controls="navbarResponsive" aria-label="Toggle Navigation">
                 <span>More</span>
-                <i class="fas fa-bars"></i>
+                <i class="fa fa-bars"></i>
               </button>
               <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><img src="<?php echo get_theme_file_uri('/assets/images/codeclub-iom-logo.svg'); ?>"/></a>
             </div>
@@ -33,7 +30,7 @@
               <?php
           		wp_nav_menu(array(
           			'menu'              => 'Menu 1',
-          			'depth'             => 0,
+          			'depth'             => 2,
           			'container'         => 'div',
           			'container_class'   => 'collapse navbar-collapse',
           			'container_id'      => 'navbarResponsive',

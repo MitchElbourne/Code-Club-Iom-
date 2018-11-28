@@ -1,7 +1,6 @@
 <?php
 get_header();
 ?>
-
 <!-- Splash Section -->
 <section id="splash" class="splash-section">
   <div class="container">

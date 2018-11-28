@@ -1,12 +1,7 @@
-.navbar {
+.navbar{
   @include media-breakpoint-up(md) {
     min-height: 84px;
     padding: 0 1rem;
-  }
-  @include media-breakpoint-down(md) {
-    //box-shadow: 0 4px 8px 0 rgba(52, 64, 75, 0.16);
-    //-webkit-backface-visibility: hidden;
-    //-webkit-transform: translate3d(0,0,0);
   }
   &.fixed-top {
     background-color: $white;
@@ -50,7 +45,7 @@
           color: $booger;
         }
         @include media-breakpoint-down(md) {
-          font-size: 13px;
+          font-size: 10px;
         }
         @include media-breakpoint-up(lg) {
           padding: 36px 16px;
@@ -58,12 +53,12 @@
       }
     }
   }
-  .navbar-toggler{
+  button {
     padding: 8px;
     border-radius: 0;
     border: none;
     color: $booger;
-    span{
+    span {
       font-size: 12px;
       line-height: 24px;
       font-family: $Montserrat;
@@ -71,7 +66,7 @@
       font-style: normal;
       text-transform: uppercase;
     }
-    i{
+    i {
       border: 2px solid $booger;
       padding: 2px;
       width: 20px;

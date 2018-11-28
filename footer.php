@@ -1,5 +1,3 @@
-<!-- Footer -->
-<!-- SECTION : Contact -->
 <?php // TODO: Pull menu items from WP menu ?>
   <section id="contact" class="contact-section">
     <div class="container">
