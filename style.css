@@ -68,6 +68,10 @@ h6 {
   color: #384648;
 }
 
+p {
+  font-family: "Nunito", sans-serif;
+}
+
 .h1,
 h1 {
   font-size: 48px;
