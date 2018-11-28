@@ -1,13 +1,23 @@
-.navbar{
+#mainNav.scrolled {
+  box-shadow: 0 0 5px 0 black;
+  transition: box-shadow 300ms linear;
+}
+
+
+.header {
+  .navbar {
+    box-shadow: none;
+    transition: box-shadow 150ms linear;
+  }
+}
+
+.navbar {
   @include media-breakpoint-up(md) {
     min-height: 84px;
     padding: 0 1rem;
   }
   &.fixed-top {
     background-color: $white;
-  }
-  &.navbar-shrink {
-    box-shadow: 0 4px 8px 0 rgba(52, 64, 75, 0.16);
   }
   .navbar-brand {
     padding: 24px 0px;
