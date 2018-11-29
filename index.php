@@ -115,8 +115,11 @@ get_header();
       <div class="col-12 col-sm-12 col-md-12 col-lg-4 upcoming-events">
         <div class="search-box">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search">
-            <span class="input-group-btn"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-search.svg'); ?>" alt="icon"></span>
+            <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+          	  <input type="text" value="Search" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" name="s" id="search" class="form-control" />
+          		<button type="submit" id="searchsubmit" value="search" class="input-group-btn"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-search.svg'); ?>" alt="icon"></button>
+            </form>
+            <div class="clear"></div>
           </div>
         </div><!-- search-box -->
       </div><!-- col --><!-- upcoming-events -->

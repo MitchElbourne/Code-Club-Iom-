@@ -49,6 +49,6 @@ show_admin_bar(false);
 // Action the scrips/styles to the page with priority 99 to place it after the main css
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts_styles', 99);
 // Initiate the javascript as a priority over parent theme
-add_action('wp_enqueue_scripts', 'enqueue_theme_custom_script', 99)
+add_action('wp_enqueue_scripts', 'enqueue_theme_custom_script', 99);
 
 ?>
