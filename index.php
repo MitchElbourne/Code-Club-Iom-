@@ -28,10 +28,12 @@ get_header();
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-8 news">
 <?php
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
   $recentPosts = new WP_Query(array(
     'post_type' => 'post',
     'posts_per_page' => 9,
-    'post_order' => "ASC"
+    'post_order' => "ASC",
+    'paged' => $paged,
   ));
 
 
@@ -108,8 +110,15 @@ get_header();
         </article><!-- article -->
       </div>
     <?php }
-  }
-?>
+  } ?>
+
+      <div class="pagination">
+        <div class="prev"><?php previous_posts_link('Previous posts', $postslist->max_num_pages); ?></div>
+        <div class="next"><?php next_posts_link('Next posts', $postslist->max_num_pages); ?></div>
+      </div>
+
+
+
         </div><!-- row -->
       </div><!-- row -->
       <div class="col-12 col-sm-12 col-md-12 col-lg-4 upcoming-events">

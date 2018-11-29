@@ -434,6 +434,35 @@ footer {
   flex-wrap: wrap;
 }
 
+.blog-articles .pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 2px solid rgba(52, 68, 82, 0.2);
+  border-radius: 0;
+  margin: 0 1rem 5rem 1rem;
+}
+
+.blog-articles .pagination div {
+  margin: 2rem 0 0 0;
+}
+
+.blog-articles .pagination a {
+  font-size: 1.5rem;
+  line-height: 24px;
+  color: #cdd1d1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  transition: color 300ms ease-out;
+}
+
+.blog-articles .pagination a:hover {
+  color: #86a93d;
+  opacity: .8;
+  transition: color 350ms linear;
+}
+
 .post-item {
   position: relative;
   display: -webkit-box;
@@ -708,25 +737,6 @@ footer {
 .news-events-section .footer-news {
   border-top: 2px solid #cdd1d1;
   padding: 19px 0;
-}
-
-.news-events-section .footer-news .prev, .news-events-section .footer-news .next {
-  font-size: 18px;
-  line-height: 24px;
-  color: #cdd1d1;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  transition: all 0.25s ease-out;
-}
-
-.news-events-section .footer-news .prev:hover, .news-events-section .footer-news .next:hover {
-  opacity: .8;
-  transition: all 0.3s linear;
-}
-
-.news-events-section .footer-news .prev.has-post, .news-events-section .footer-news .next.has-post {
-  color: #86a93d;
 }
 
 /* SECTION : Contact Us */
