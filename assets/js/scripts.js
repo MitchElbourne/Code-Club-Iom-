@@ -62,9 +62,14 @@ jQuery(document).ready(function(jQuery) {
           }
       }
   });
+
+  jQuery(window).on('scroll', _.debounce(function() {
+    
+  }, 200));
+
 });
 
 function On_Resize() {
   // Override parent theme js when the window is resized
   jQuery('body').css('padding-top', 70 + "px");
-}
+};

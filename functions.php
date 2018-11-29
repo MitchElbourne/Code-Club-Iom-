@@ -19,27 +19,24 @@ function enqueue_theme_scripts_styles () {
   wp_enqueue_style('stylesheet');
 
   // Register the scripts
-  wp_register_script('jquery', "https://code.jquery.com/jquery-3.3.1.slim.min.js", array('jquery'), false, true);
-  wp_register_script('popper', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js", array('jquery'), false, true);
-  wp_register_script('tether', "https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js", array('jquery'), false, true);
-
 
   // Enqueue the scripts
-  wp_enqueue_script('jquery');
-  // wp_enqueue_script('popper');
-  // wp_enqueue_script('tether');
 
   // TODO: Add JavaScript
   // Register custom scripts
 }
 
 function enqueue_theme_custom_script() {
-  wp_enqueue_script('main_script', get_theme_file_uri('assets/js/scripts.js'), array('jquery'), false, true);
+  wp_register_script('jquery', "https://code.jquery.com/jquery-3.3.1.slim.min.js", array('jquery'), false, true);
+  wp_register_script('lodash', "https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js", array(), false, true);
+  wp_register_script('main_script', get_theme_file_uri('assets/js/scripts.js'), array('jquery'), false, true);
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('lodash');
+  wp_enqueue_script('main_script');
 
 }
 // Retrieve the NavWalker file and load as a template
 get_template_part('navwalker4');
-
 
 
 // Hide the admin bar
