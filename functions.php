@@ -17,13 +17,6 @@ function enqueue_theme_scripts_styles () {
   wp_enqueue_style('montserratfont');
   wp_enqueue_style('font-awesome');
   wp_enqueue_style('stylesheet');
-
-  // Register the scripts
-
-  // Enqueue the scripts
-
-  // TODO: Add JavaScript
-  // Register custom scripts
 }
 
 function enqueue_theme_custom_script() {

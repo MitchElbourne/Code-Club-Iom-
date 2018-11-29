@@ -24,6 +24,7 @@
           <div class="item sign-up">
             <h5 class="title">Sign up for code club mailing list</h5>
             <?php // TODO: Implement form for subscribers ?>
+
               <div class="form-group"> <label>Email address*</label> <input type="text" class="form-control"> </div>
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 first-name">
@@ -44,9 +45,13 @@
           <div class="item help-us">
             <h5 class="title">Help us do more</h5>
             <span>Donate to Code Club:</span>
-            <button type="submit" class="cta cta-donate">
-              <span>Donate</span>
-            </button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="6ZUQBC5TBLFAU">
+              <button type="submit" class="cta cta-donate">
+                <span>Donate</span>
+              </button>
+            </form>
             <?php // TODO: Fix paypal link ?>
             <ul class="icons-donate">
               <li><img src="<?php echo get_theme_file_uri('/assets/images/icons/icon-visa.svg'); ?>" alt="icon"></li>
