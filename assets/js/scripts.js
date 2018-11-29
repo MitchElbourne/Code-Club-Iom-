@@ -64,8 +64,12 @@ jQuery(document).ready(function(jQuery) {
   });
 
   jQuery(window).on('scroll', _.debounce(function() {
-    
-  }, 200));
+    if (jQuery("#mainNav").offset().top > 100) {
+      jQuery("#mainNav").addClass("scrolled");
+    } else {
+      jQuery("#mainNav").removeClass("scrolled");
+    }
+  }, 150));
 
 });
 
