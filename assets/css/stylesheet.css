@@ -254,6 +254,10 @@ a:active {
   }
 }
 
+.navbar ul li .dropdown-menu {
+  margin: 0;
+}
+
 .navbar ul li a {
   font-size: 14px;
   line-height: 32px;

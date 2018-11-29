@@ -41,6 +41,9 @@
       margin: 16px 0;
     }
     li {
+      .dropdown-menu {
+        margin: 0;
+      }
       a {
         font-size: 14px;
         line-height: 32px;

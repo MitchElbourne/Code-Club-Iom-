@@ -44,20 +44,27 @@
 // })(jQuery); // End of use strict
 
 
-
-// On document ready
 jQuery(document).ready(function(jQuery) {
   // Override parent theme custom.js line 83 to stop <a> click closing navbar
   jQuery('.navbar-collapse ul li a').unbind('click');
 
-
+  // Override parent theme applying padding on load
   jQuery('body').css('padding-top', 70 + "px");
 
+
+  // For closing the navbar when clicking outside of the container
+  jQuery('body').bind('click', function(e) {
+      if(jQuery(e.target).closest('.collapse').length == 0) {
+          var opened = jQuery('.navbar-collapse').hasClass('collapse');
+          if ( opened === true ) {
+              jQuery('.navbar-collapse').collapse('hide');
+              jQuery('#mainNav').removeClass('open');
+          }
+      }
+  });
 });
 
 function On_Resize() {
-    jQuery('body').css('padding-top', 70 + "px");
+  // Override parent theme js when the window is resized
+  jQuery('body').css('padding-top', 70 + "px");
 }
-
-
-// $('.current').css('background-color: red');
