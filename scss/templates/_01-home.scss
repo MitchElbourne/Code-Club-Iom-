@@ -171,9 +171,8 @@
 
 .splash-section {
   padding-top: 24px;
-  margin-top: 2rem;
-  @include media-breakpoint-down(sm) {
-    margin-top: 55px;
+  @include media-breakpoint-up(lg) {
+    margin-top: 2rem;
   }
   .splash-content {
     position: relative;

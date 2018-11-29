@@ -43,17 +43,21 @@
 //
 // })(jQuery); // End of use strict
 
-var debounce_timer;
-$(function() {
-  $(document).scroll(function() {
-    if (debounce_timer) {
-      window.clearTimeout(debounce_timer);
-    }
 
-    debounce_timer = window.setTimeout(function () {
-      var nav = $("#mainNav");
-      nav.toggleClass('scrolled', $(this).scrollTop() > nav.height());
-      console.log("scroll");
-    }), 100;
-  });
+
+// On document ready
+jQuery(document).ready(function(jQuery) {
+  // Override parent theme custom.js line 83 to stop <a> click closing navbar
+  jQuery('.navbar-collapse ul li a').unbind('click');
+
+
+  jQuery('body').css('padding-top', 70 + "px");
+
 });
+
+function On_Resize() {
+    jQuery('body').css('padding-top', 70 + "px");
+}
+
+
+// $('.current').css('background-color: red');

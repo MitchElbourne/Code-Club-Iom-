@@ -31,14 +31,24 @@ function enqueue_theme_scripts_styles () {
 
   // TODO: Add JavaScript
   // Register custom scripts
-  wp_enqueue_script('main_script', get_theme_file_uri('assets/js/scripts.js'), array('jquery'), microtime(), true);
+}
+
+function enqueue_theme_custom_script() {
+  wp_enqueue_script('main_script', get_theme_file_uri('assets/js/scripts.js'), array('jquery'), false, true);
+
 }
 // Retrieve the NavWalker file and load as a template
 get_template_part('navwalker4');
+
+
+
 // Hide the admin bar
 // TODO: Reintroduce admin bar after development
 show_admin_bar(false);
+
 // Action the scrips/styles to the page with priority 99 to place it after the main css
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts_styles', 99);
+// Initiate the javascript as a priority over parent theme
+add_action('wp_enqueue_scripts', 'enqueue_theme_custom_script', 99)
 
 ?>

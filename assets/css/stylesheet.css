@@ -613,12 +613,11 @@ footer {
 
 .splash-section {
   padding-top: 24px;
-  margin-top: 2rem;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 992px) {
   .splash-section {
-    margin-top: 55px;
+    margin-top: 2rem;
   }
 }
 
