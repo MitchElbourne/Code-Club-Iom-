@@ -28,6 +28,18 @@ function enqueue_theme_custom_script() {
   wp_enqueue_script('main_script');
 
 }
+
+// Remove enqueues for main theme
+function deenqueue_parent_scripts_styles() {
+    wp_dequeue_script( 'one-page-slitslider' );
+    wp_deregister_script( 'one-page-slitslider' );
+    wp_dequeue_script( 'one-page-custom' );
+    wp_deregister_script( 'one-page-custom' );
+}
+add_action( 'wp_enqueue_scripts', 'deenqueue_parent_scripts_styles', 99);
+
+
+
 // Retrieve the NavWalker file and load as a template
 get_template_part('navwalker4');
 

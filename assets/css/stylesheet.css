@@ -387,6 +387,20 @@ a:active {
   box-shadow: none;
 }
 
+.page-search {
+  padding-top: 2.4rem;
+}
+
+.page-search .search-box .input-group {
+  width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .page-search {
+    padding-bottom: 1rem;
+  }
+}
+
 .search-box .input-group {
   display: inline-block;
   position: relative;

@@ -11,8 +11,8 @@
           <div class="item feed">
             <h5 class="title">Feed</h5>
             <a href="<?php echo esc_url('https://www.google.com/calendar/ical/1do5ep6up9hmu0hcejef2r8dfg%40group.calendar.google.com/public/basic.ics'); ?>">Calendar Feed</a>
-            <?php // BUG: Fix feed url ?>
-            <a href="<?php echo esc_url(home_url('/feed')); ?>">News RSS Feed</a>
+            <?php // TODO: : Borken feed ?>
+            <!-- <a href="<?php echo esc_url(home_url('/feed')); ?>">News RSS Feed</a> -->
           </div><!-- feed -->
         </div><!-- col -->
         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
@@ -23,7 +23,7 @@
           </div><!-- find-us -->
           <div class="item sign-up">
             <?php
-              dynamic_sidebar('secondary-widget-area');
+              dynamic_sidebar('first-footer-widget-area');
             ?>
             </form>
           </div><!-- sign-up -->
@@ -41,13 +41,13 @@
             </form>
             <?php // TODO: Fix paypal link ?>
             <ul class="icons-donate">
-              <li><img src="<?php echo get_theme_file_uri('/assets/images/icons/icon-visa.svg'); ?>" alt="icon"></li>
-              <li><img src="<?php echo get_theme_file_uri('/assets/images/icons/icon-visa-v2.svg'); ?>" alt="icon"></li>
-              <li><img src="<?php echo get_theme_file_uri('/assets/images/icons/icon-mastercard.svg'); ?>" alt="icon"></li>
-              <li><img src="<?php echo get_theme_file_uri('/assets/images/icons/icon-maestro.svg'); ?>" alt="icon"></li>
-              <li><img src="<?php echo get_theme_file_uri('/assets/images/icons/icon-paypal.svg'); ?>" alt="icon"></li>
-              <li><img src="<?php echo get_theme_file_uri('/assets/images/icons/icon-amazon.svg'); ?>" alt="icon"></li>
-              <li><img src="<?php echo get_theme_file_uri('/assets/images/icons/icon-bitcoin.svg'); ?>" alt="icon"></li>
+              <li><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-visa.svg'); ?>" alt="icon"></li>
+              <li><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-visa-v2.svg'); ?>" alt="icon"></li>
+              <li><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-mastercard.svg'); ?>" alt="icon"></li>
+              <li><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-maestro.svg'); ?>" alt="icon"></li>
+              <li><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-paypal.svg'); ?>" alt="icon"></li>
+              <li><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-amazon.svg'); ?>" alt="icon"></li>
+              <li><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-bitcoin.svg'); ?>" alt="icon"></li>
             </ul>
           </div><!-- help-us -->
         </div><!-- col -->

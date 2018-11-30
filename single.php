@@ -8,16 +8,16 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <!-- Start the Loop. -->
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-        $date = date('d.m.y', strtotime(get_the_date()));
-        $image;
-        if (!get_the_post_thumbnail_url()) {
-          $image = get_theme_file_uri('2018-Digital-Marketing.jpeg');
-        } else {
-          $image = get_the_post_thumbnail_url();
-        }
-        ?>
+                    <!-- Start the Loop. -->
+    				<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+            $date = date('d.m.y', strtotime(get_the_date()));
+            $image;
+            if (!get_the_post_thumbnail_url()) {
+              $image = get_theme_file_uri('2018-Digital-Marketing.jpeg');
+            } else {
+              $image = get_the_post_thumbnail_url();
+            }
+            ?>
             <article class="post-item">
             <div class="post-thumbnail">
               <div class="ratio-container">
@@ -40,9 +40,6 @@ get_header();
                 <a href="<?php echo get_author_posts_url($post->post_author); ?>" class="post-author"><img src="<?php echo get_theme_file_uri('/assets/images/Icons/icon-pen.svg'); ?>" alt="icon"><?php the_author(); ?></a>
                 <a class="post-date"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-calendar.svg'); ?>" alt="icon"><?php echo $date; ?></a>
               </div>
-            </div><!-- post-meta -->
-							<div class="clear"></div>
-						</div>
           </article><!--article end-->
 						<?php
 					endwhile;
@@ -61,16 +58,20 @@ get_header();
                     </span> </nav>
                 <div class="clear"></div>
                 <div class="comment_section">
-                    <!--Start Comment list-->
-					<?php comments_template( '', true ); ?>
-                    <!--End Comment Form-->
+	                   <?php comments_template( '', true ); ?>
                 </div>
             </div>
             <!--Sidebar-->
-            <div class="col-md-4">
-                <!--Start Sidebar-->
-				<?php get_sidebar(); ?>
-                <!--End Sidebar-->
+            <div class="col-md-4 page-search">
+              <div class="search-box">
+                <div class="input-group">
+                  <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                	  <input type="text" value="Search" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" name="s" id="search" class="form-control" />
+                		<button type="submit" id="searchsubmit" value="search" class="input-group-btn"><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-search.svg'); ?>" alt="icon"></button>
+                  </form>
+                  <div class="clear"></div>
+                </div>
+              </div><!-- search-box -->
             </div>
             <div class="clear"></div>
         </div>
