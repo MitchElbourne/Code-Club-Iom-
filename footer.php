@@ -22,22 +22,9 @@
             <p><span>3 Prospect Hill, Douglas </span><br><span>Isle of Man, IM1 1ES</span></p>
           </div><!-- find-us -->
           <div class="item sign-up">
-            <h5 class="title">Sign up for code club mailing list</h5>
-            <?php // TODO: Implement form for subscribers ?>
-
-              <div class="form-group"> <label>Email address*</label> <input type="text" class="form-control"> </div>
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 first-name">
-                  <div class="form-group"> <label>First name</label> <input type="text" class="form-control"> </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 last-name">
-                  <div class="form-group"> <label>Last name</label> <input type="text" class="form-control"> </div>
-                </div>
-              </div>
-              <span class="note">*required field</span>
-              <button type="submit" class="cta cta-subscribe">
-                <span>Subscribe</span>
-              </button>
+            <?php
+              dynamic_sidebar('secondary-widget-area');
+            ?>
             </form>
           </div><!-- sign-up -->
         </div><!-- col -->

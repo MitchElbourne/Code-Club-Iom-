@@ -45,7 +45,7 @@ get_header();
     $date = date('d.m.y', strtotime(get_the_date()));
     $image;
     if (!get_the_post_thumbnail_url()) {
-      $image = get_theme_file_uri('assets/images/lets-get-kids-coding.png');
+      $image = get_theme_file_uri('/assets/images/2018-Digital-Marketing.jpg');
     } else {
       $image = get_the_post_thumbnail_url();
     }

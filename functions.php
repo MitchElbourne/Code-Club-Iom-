@@ -41,4 +41,6 @@ add_action('wp_enqueue_scripts', 'enqueue_theme_scripts_styles', 99);
 // Initiate the javascript as a priority over parent theme
 add_action('wp_enqueue_scripts', 'enqueue_theme_custom_script', 99);
 
+
+
 ?>

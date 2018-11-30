@@ -283,7 +283,7 @@
     color: $charcoal-grey;
   }
   .resources,
-  .feed{
+  .feed {
     margin-bottom: 33px;
     a {
       display: block;
@@ -305,14 +305,23 @@
     }
   }
   .find-us {
-    margin-bottom: 48px;
+    margin-bottom: 38px;
     .sub-text {
       margin-bottom: 8px;
     }
   }
   .sign-up {
     margin-bottom: 48px;
-    .form-group {
+    .widget_title {
+      font-family: $Montserrat;
+      font-weight: 700;
+      font-style: normal;
+      margin-bottom: $headings-margin-bottom;
+      color: $headings-color;
+      text-transform: uppercase;
+      padding-bottom: 0.7rem;
+    }
+    .mc_merge_var {
       background: $white;
       padding: 8px 16px;
       margin-bottom: 4px;
@@ -335,6 +344,9 @@
       display: block;
       font-size: 14px;
       line-height: 24px;
+    }
+    .mc_error_msg {
+      color: rgba($booger, 0.8);
     }
   }
   .help-us {

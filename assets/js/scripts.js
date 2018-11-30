@@ -64,14 +64,14 @@ jQuery(document).ready(function(jQuery) {
   });
 
   jQuery(window).on('scroll', _.debounce(function() {
-    if (jQuery("#mainNav").offset().top > 100) {
+    if (jQuery("#mainNav").offset().top > 10) {
       jQuery("#mainNav").addClass("scrolled");
     } else {
       jQuery("#mainNav").removeClass("scrolled");
     }
   }, 150));
+  });
 
-});
 
 function On_Resize() {
   // Override parent theme js when the window is resized

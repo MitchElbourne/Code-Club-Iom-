@@ -199,6 +199,10 @@ a:active {
   cursor: pointer;
 }
 
+.homepage_nav_title {
+  display: none;
+}
+
 #mainNav.scrolled {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   transition: box-shadow 300ms linear;
@@ -331,16 +335,23 @@ a:active {
   border-radius: 24px;
 }
 
-.cta-subscribe {
+#mc_signup_submit {
   background-color: #86a93d;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 1rem;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
 }
 
-.cta-subscribe:hover, .cta-subscribe:focus {
+#mc_signup_submit:hover, #mc_signup_submit:focus {
   background-color: #597129;
   transition: background-color 0.25s ease-out;
 }
 
-.cta-subscribe:active {
+#mc_signup_submit:active {
   color: #cccccc;
   background-color: #3c4b1b;
 }
@@ -794,7 +805,7 @@ a:active {
 }
 
 .contact-section .find-us {
-  margin-bottom: 48px;
+  margin-bottom: 38px;
 }
 
 .contact-section .find-us .sub-text {
@@ -805,13 +816,23 @@ a:active {
   margin-bottom: 48px;
 }
 
-.contact-section .sign-up .form-group {
+.contact-section .sign-up .widget_title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 0.5rem;
+  color: #384648;
+  text-transform: uppercase;
+  padding-bottom: 0.7rem;
+}
+
+.contact-section .sign-up .mc_merge_var {
   background: #ffffff;
   padding: 8px 16px;
   margin-bottom: 4px;
 }
 
-.contact-section .sign-up .form-group label {
+.contact-section .sign-up .mc_merge_var label {
   font-size: 12px;
   line-height: 24px;
   font-family: "Montserrat", sans-serif;
@@ -820,7 +841,7 @@ a:active {
   text-transform: uppercase;
 }
 
-.contact-section .sign-up .form-group input {
+.contact-section .sign-up .mc_merge_var input {
   padding: 5px 0;
   border: none;
   box-shadow: none;
@@ -831,6 +852,10 @@ a:active {
   display: block;
   font-size: 14px;
   line-height: 24px;
+}
+
+.contact-section .sign-up .mc_error_msg {
+  color: rgba(134, 169, 61, 0.8);
 }
 
 .contact-section .help-us .cta-donate {
