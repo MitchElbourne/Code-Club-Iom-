@@ -42,12 +42,32 @@ show_admin_bar(false);
 
 // Retrieve the NavWalker file and load as a template
 get_template_part('navwalker4');
-
 // Action the scrips/styles to the page with priority 99 to place it after the main css
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts_styles', 99);
 // Initiate the javascript as a priority over parent theme
 add_action('wp_enqueue_scripts', 'enqueue_theme_custom_script', 99);
 
+// Custom Post Types
+function website_custom_post_types () {
+  register_post_type('event', array(
+    'capability_type' => 'post',
+    'map_meta_cap' => true,
+    'supports' => array('title'),
+    'rewrite' => array('slug' => 'events'),
+    'has_archive' => true,
+    'public' => true,
+    'labels' => array(
+      'name' => 'Events',
+      'add_new_item' => 'Add New Event',
+      'edit_item' => 'Edit Event',
+      'all_items' => 'All Events',
+      'singular_name' => 'Event',
+    ),
+    'menu_icon' => 'dashicons-calendar'
+  ));
+}
 
+// Action the custom post-types
+add_action('init', 'website_custom_post_types');
 
 ?>

@@ -374,6 +374,27 @@ a:active {
   background-color: #ac5400;
 }
 
+.upcoming-events .event {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+  padding: 0.3rem 1rem;
+  transition: background-color 300ms linear;
+}
+
+.upcoming-events .event .event-information .event-date {
+  font-size: 1.4rem;
+}
+
+.upcoming-events .event:hover {
+  background-color: rgba(0, 128, 0, 0.2);
+  transition: background-color 300ms linear;
+}
+
+.event-single {
+  padding: 30px 0;
+}
+
 .input-config {
   border-radius: 0;
   height: 60px;
@@ -554,15 +575,15 @@ a:active {
   margin-top: 24px;
 }
 
-.post-item .post-thumbnail {
+.post-item .post-thumbnail, .post-item .wp-post-image {
   position: relative;
 }
 
-.post-item .post-thumbnail .ratio-container {
+.post-item .post-thumbnail .ratio-container, .post-item .wp-post-image .ratio-container {
   padding-bottom: 50%;
 }
 
-.post-item .post-thumbnail .ratio-container .ratio-content {
+.post-item .post-thumbnail .ratio-container .ratio-content, .post-item .wp-post-image .ratio-container .ratio-content {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   position: absolute;
@@ -574,11 +595,11 @@ a:active {
   background-position: 50% 50%;
 }
 
-.post-item .post-thumbnail:hover .post-overlay {
+.post-item .post-thumbnail:hover .post-overlay, .post-item .wp-post-image:hover .post-overlay {
   opacity: 1;
 }
 
-.post-item .post-thumbnail .post-overlay {
+.post-item .post-thumbnail .post-overlay, .post-item .wp-post-image .post-overlay {
   position: absolute;
   top: 0;
   bottom: 0;

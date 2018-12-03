@@ -1,0 +1,36 @@
+.upcoming-events {
+  // border: 1px solid red;
+  .event {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+    padding: 0.3rem 1rem;
+    transition: background-color 300ms linear;
+    .event-information {
+      .event-date {
+        font-size: 1.4rem;
+      }
+      .event-time, &span {
+
+      }
+      .event-content {
+
+      }
+    }
+    &:hover {
+      background-color: rgba(green, 0.2);
+      transition: background-color 300ms linear;
+    }
+  }
+}
+
+.event-single {
+  padding: 30px 0;
+  .event {
+    .event-content {
+      .event-contact {
+
+      }
+    }
+  }
+}

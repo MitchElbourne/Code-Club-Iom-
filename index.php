@@ -118,9 +118,52 @@ get_header();
 
         </div><!-- row -->
       </div><!-- row -->
-      <div class="col-12 col-sm-12 col-md-12 col-lg-4 upcoming-events">
-            <?php dynamic_sidebar('primary-widget-area'); ?>
-      </div><!-- col --><!-- upcoming-events -->
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+        <?php dynamic_sidebar('primary-widget-area'); ?>
+        <div class="upcoming-events">
+          <h3>Upcoming Code Club Events!</h3>
+          <?php
+          $events = new WP_Query(array(
+            'post_type' => 'event',
+            'post_order' => 'ASC',
+            'meta_key' => 'event_date',
+            'orderby' => 'meta_value_num',
+            'order' => 'ASC',
+            'meta_query' => array(
+              array(
+              'key' => 'event_date',
+              'compare' => '>=',
+              'value' => $today,
+              'type' => 'numberic'
+              )
+            ),
+          ));
+          while ($events->have_posts()) {
+            $events->the_post();
+            $date = date('d/m', strtotime(get_field('event_date')));
+            ?>
+
+            <div class="event">
+              <a href="<?php the_permalink(); ?>">
+                <h4 class="event-title"><?php the_title(); ?></h4>
+                <div class="event-information">
+                  <p class="event-date"><?php echo $date; ?></p>
+                  <p class="event-time"><span><?php the_field('event_time_start'); ?></span> - <span><?php the_field('event_time_end'); ?></span></p>
+                  <p class="event-content"><?php echo wp_trim_words(get_field('event_description'), 15); ?></p>
+                  <?php
+                  if (!isset($radioButtons['Unavailable'])) { ?>
+                    <button class="btn btn-available">Book your spot</button>
+                  <?php } else { ?>
+                    <button class="btn btn-unavailable"></button>
+                  <?php }
+                  ?>
+              </a>
+              </div>
+            </div>
+          <?php }
+          ?>
+        </div><!-- upcoming events -->
+      </div><!-- col -->
   </div><!-- container -->
 </section><!-- SECTION : News & Events -->
 
