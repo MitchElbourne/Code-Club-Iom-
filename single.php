@@ -33,8 +33,6 @@ get_header();
             <div class="post-content">
               <p><?php echo get_the_content(); ?></p>
             </div><!-- post-content -->
-
-            <?php // TODO: Configure Post-Meta ?>
             <div class="post-meta">
               <div class="post-meta-content pull-right">
                 <a href="<?php echo get_author_posts_url($post->post_author); ?>" class="post-author"><img src="<?php echo get_theme_file_uri('/assets/images/Icons/icon-pen.svg'); ?>" alt="icon"><?php the_author(); ?></a>

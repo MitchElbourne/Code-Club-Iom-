@@ -25,8 +25,12 @@
     padding-bottom: 1rem;
   }
 }
-.widget_area {
-  .search-widget {
+.sidebar {
+  margin: 4rem 0 0 0;
+}
+.widget_area, .search-box {
+  text-align: left;
+  form {
     display: inline-block;
     position: relative;
     z-index: 1;

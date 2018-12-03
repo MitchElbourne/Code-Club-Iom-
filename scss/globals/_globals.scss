@@ -19,3 +19,10 @@ a:active{
 .homepage_nav_title {
   display: none;
 }
+
+// Fixes comments boxes odd spacing on pages
+#commentsbox {
+  ol {
+    padding-left: 0;
+  }
+}

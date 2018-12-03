@@ -1,4 +1,3 @@
-<?php // TODO: Pull menu items from WP menu ?>
   <section id="contact" class="contact-section">
     <div class="container">
       <div class="row">
@@ -11,7 +10,7 @@
           <div class="item feed">
             <h5 class="title">Feed</h5>
             <a href="<?php echo esc_url('https://www.google.com/calendar/ical/1do5ep6up9hmu0hcejef2r8dfg%40group.calendar.google.com/public/basic.ics'); ?>">Calendar Feed</a>
-            <?php // TODO: : Borken feed ?>
+            <?php // BUG: RSS Feed is broken ?>
             <!-- <a href="<?php echo esc_url(home_url('/feed')); ?>">News RSS Feed</a> -->
           </div><!-- feed -->
         </div><!-- col -->
@@ -39,7 +38,6 @@
                 <span>Donate</span>
               </button>
             </form>
-            <?php // TODO: Fix paypal link ?>
             <ul class="icons-donate">
               <li><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-visa.svg'); ?>" alt="icon"></li>
               <li><img src="<?php echo get_theme_file_uri('assets/images/Icons/icon-visa-v2.svg'); ?>" alt="icon"></li>

@@ -113,7 +113,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			/**
 			 * Get an updated $classes array without linkmod or icon classes.
 			 *
-			 * NOTE: linkmod and icon class arrays are passed by reference and
+			 *
 			 * are maybe modified before being used later in this function.
 			 */
 			$classes = self::separate_linkmods_and_icons_from_classes( $classes, $linkmod_classes, $icon_classes, $depth );
@@ -385,7 +385,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 		 * Supported linkmods: .disabled, .dropdown-header, .dropdown-divider, .sr-only
 		 * Supported iconsets: Font Awesome 4/5, Glypicons
 		 *
-		 * NOTE: This accepts the linkmod and icon arrays by reference.
+		 * 
 		 *
 		 * @since 4.0.0
 		 *

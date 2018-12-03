@@ -25,7 +25,7 @@
     }
     img {
       max-width: 224px;
-      width: 100%;
+      width: 300px;
       max-height: 56px;
       @include media-breakpoint-down(md) {
         max-width: 192px;

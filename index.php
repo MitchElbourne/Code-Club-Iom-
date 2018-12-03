@@ -36,8 +36,6 @@ get_header();
     'paged' => $paged,
   ));
 
-
-  // TODO: Use a better method for retreiving first post
   // Variable used for retreiving the first post from the array
   $postcount = 0;
   while ($recentPosts->have_posts()) {
@@ -68,7 +66,6 @@ get_header();
           <p><?php echo wp_trim_words(get_the_content(), 55); ?></p>
         </div><!-- post-content -->
 
-        <?php // TODO: Configure Post-Meta ?>
         <div class="post-meta">
           <a href="<?php echo the_permalink(); ?>" class="cta cta-read-more">Read more</a>
           <div class="post-meta-content pull-right">

@@ -38,15 +38,10 @@ function deenqueue_parent_scripts_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'deenqueue_parent_scripts_styles', 99);
 
-
+show_admin_bar(false);
 
 // Retrieve the NavWalker file and load as a template
 get_template_part('navwalker4');
-
-
-// Hide the admin bar
-// TODO: Reintroduce admin bar after development
-show_admin_bar(false);
 
 // Action the scrips/styles to the page with priority 99 to place it after the main css
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts_styles', 99);
