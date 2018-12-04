@@ -374,6 +374,10 @@ a:active {
   background-color: #ac5400;
 }
 
+.upcoming-events .no-event-listings {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .upcoming-events .event {
   background-color: #f5f6f6;
   border-radius: 8px;

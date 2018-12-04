@@ -123,31 +123,34 @@ get_header();
         <div class="upcoming-events">
           <h3>Upcoming Events!</h3>
           <?php
-
           $events = new WP_Query(array(
             'post_type' => 'event',
             'order' => 'ASC',
           ));
+          if ($events) {
+            while ($events->have_posts()) {
+              $events->the_post();
+              $eventdate = date('d.m.y', strtotime(get_field('event_date')));
+              ?>
 
-          while ($events->have_posts()) {
-            $events->the_post();
-            $eventdate = date('d.m.y', strtotime(get_field('event_date')));
-            ?>
-
-            <div class="event">
-              <a href="<?php the_permalink(); ?>">
-                <h4 class="event-title"><?php the_title(); ?></h4>
-                <div class="event-datetime">
-                  <p class="event-date"><?php echo $eventdate ?></p>
-                  <span class="break"></span>
-                  <p class="event-time"><?php the_field('event_time_start'); ?> - <?php the_field('event_time_end'); ?></p>
-                </div>
-                <p class="event-content"><?php echo wp_trim_words(get_field('event_description'), 20); ?></p>
-                <a class="cta-read-more" href="<?php the_permalink(); ?>">Read More</a>
-              </a>
-            </div>
-          <?php }
-          ?>
+              <div class="event">
+                <a href="<?php the_permalink(); ?>">
+                  <h4 class="event-title"><?php the_title(); ?></h4>
+                  <div class="event-datetime">
+                    <p class="event-date"><?php echo $eventdate ?></p>
+                    <span class="break"></span>
+                    <p class="event-time"><?php the_field('event_time_start'); ?> - <?php the_field('event_time_end'); ?></p>
+                  </div>
+                  <p class="event-content"><?php echo wp_trim_words(get_field('event_description'), 20); ?></p>
+                  <a class="cta-read-more" href="<?php the_permalink(); ?>">Read More</a>
+                </a>
+              </div>
+            <?php }
+          } else { ?>
+            <p class="no-event-listings">
+              Sorry, there don't seem to be any upcoming events. Keep your eye on this page though, there could be one soon!
+            </p>
+          <?php } ?>
         </div><!-- upcoming events -->
       </div><!-- col -->
   </div><!-- container -->
