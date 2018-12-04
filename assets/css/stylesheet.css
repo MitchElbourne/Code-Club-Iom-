@@ -375,24 +375,101 @@ a:active {
 }
 
 .upcoming-events .event {
+  background-color: #f5f6f6;
+  border-radius: 8px;
+  padding: 1rem 1rem 2rem 1rem;
+  margin: 1rem 0;
+}
+
+.upcoming-events .event .event-datetime {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0.5rem;
-  padding: 0.3rem 1rem;
-  transition: background-color 300ms linear;
+  padding: 0.5rem 0;
 }
 
-.upcoming-events .event .event-information .event-date {
-  font-size: 1.4rem;
+.upcoming-events .event .event-datetime .event-date {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  margin: 0;
+  padding-right: 1rem;
 }
 
-.upcoming-events .event:hover {
-  background-color: rgba(0, 128, 0, 0.2);
-  transition: background-color 300ms linear;
+.upcoming-events .event .event-datetime .break {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  height: 1rem;
+  align-self: center;
 }
 
-.event-single {
-  padding: 30px 0;
+.upcoming-events .event .event-datetime .event-time {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.upcoming-events .event .event-content {
+  padding-bottom: 0.66rem;
+}
+
+.upcoming-events .event .cta-read-more {
+  font-size: 18px;
+  line-height: 16px;
+  color: #86a93d;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.single-event {
+  padding: 25px 0;
+}
+
+.single-event .event-title {
+  padding: 1rem;
+}
+
+.single-event .event {
+  background-color: #ffffff;
+  border-radius: 0;
+}
+
+.single-event .event .event-title {
+  padding: 1rem 0;
+}
+
+.single-event .event .event-datetime {
+  padding: 1rem 0;
+}
+
+.single-event .event .btn-reserve {
+  background-color: #f5f6f6;
+  transition: all 100ms linear;
+}
+
+.single-event .event .btn-reserve:hover, .single-event .event .btn-reserve:focus {
+  color: black;
+  background-color: rgba(134, 169, 61, 0.7);
+  transition: all 150ms linear;
+}
+
+.single-event .event .btn-unavailable {
+  background-color: #f5f6f6;
+  cursor: not-allowed;
+  color: rgba(0, 0, 0, 0.3);
+  transition: all 150ms linear;
+}
+
+.single-event .event .btn-unavailable:hover, .single-event .event .btn-unavailable:focus {
+  outline: none;
+  background-color: #f5f6f6;
+  transition: all 100ms linear;
+}
+
+.single-event .event .event-contact a {
+  color: #86a93d;
+}
+
+.single-event .event .event-contact a:hover {
+  color: rgba(134, 169, 61, 0.7);
 }
 
 .input-config {

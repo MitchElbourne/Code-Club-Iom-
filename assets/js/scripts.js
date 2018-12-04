@@ -70,10 +70,12 @@ jQuery(document).ready(function(jQuery) {
       jQuery("#mainNav").removeClass("scrolled");
     }
   }, 150));
-  });
 
 
-function On_Resize() {
-  // Override parent theme js when the window is resized
-  jQuery('body').css('padding-top', 70 + "px");
-};
+  function On_Resize() {
+    // Override parent theme js when the window is resized
+    jQuery('body').css('padding-top', 70 + "px");
+  };
+
+  jQuery( 'p:empty' ).remove();
+});

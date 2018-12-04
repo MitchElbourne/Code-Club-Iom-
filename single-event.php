@@ -2,30 +2,29 @@
 get_header();
 
 $radioButtons = get_field('event_availability');
+$date = date('l, F j, Y', strtotime(get_field('event_date')));
 ?>
+  <div class="container upcoming-events single-event">
+    <h1 class="event-title"><?php the_title(); ?></h1>
+    <div class="event">
+      <div class="event-datetime">
+        <h3 class="event-date"><?php echo $date ?></h3>
+        <h3 class="event-time"><?php the_field('event_time_start'); ?> to <?php the_field('event_time_end'); ?></h3>
+      </div>
+      <div class="event-content"><?php echo get_field('event_description'); ?></div>
 
-<div class="container event-single">
-  <div class="event">
-    <h2 class="event-title"><?php the_title(); ?></h2>
-    <div class="event-content">
-      <p class="event-date"><?php the_field('event_date'); ?></p>
-      <p><span><?php the_field('event_time_start'); ?></span> - <span><?php the_field('event_time_end'); ?></span></p>
-      <p class="event-content"><?php the_field('event_description'); ?></p>
-      <?php
-      if (!isset($radioButtons['Unavailable'])) { ?>
-        <button class="btn btn-available">Book your space</button>
+      <?php if (get_field('event_availability') == 'Available Space') { ?>
+        <a class="btn btn-reserve" href="mailto:<?php echo get_field('event_organizer_email'); ?>?subject=<?php echo get_the_title(); ?> <?php echo $date; ?>">Book your space</a>
       <?php } else { ?>
-        <button class="btn btn-unavailable"></button>
-      <?php }
-      ?>
-      <?php // TODO: Add contact ?>
+        <button class="btn btn-unavailable">Book your space</button>
+      <?php } ?>
       <div class="event-contact">
         <h4>Contact the event Organizer:</h4>
-        <a class="contact-email"><?php the_field('event_organizer_email'); ?></a>
+        <a class="contact-email" href="mailto:<?php echo get_field('event_organizer_email'); ?>?subject=<?php echo get_the_title(); ?> <?php echo $date; ?>"><?php the_field('event_organizer_email'); ?></a>
       </div>
     </div>
   </div>
-</div>
+
 
 
 <?php
