@@ -424,7 +424,7 @@ a:active {
 }
 
 .single-event .event-title {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .single-event .event {
@@ -432,12 +432,17 @@ a:active {
   border-radius: 0;
 }
 
-.single-event .event .event-title {
-  padding: 1rem 0;
+.single-event .event .event-datetime {
+  padding: 0 0 2rem 0;
 }
 
-.single-event .event .event-datetime {
-  padding: 1rem 0;
+@media (max-width: 991px) {
+  .single-event .event .event-datetime {
+    display: block;
+  }
+  .single-event .event .event-datetime .event-time {
+    padding: 1rem 0 0 0;
+  }
 }
 
 .single-event .event .btn-reserve {
@@ -464,11 +469,19 @@ a:active {
   transition: all 100ms linear;
 }
 
+.single-event .event .sorry-msg {
+  color: rgba(134, 169, 61, 0.8);
+}
+
+.single-event .event .event-contact {
+  padding-top: 3rem;
+}
+
 .single-event .event .event-contact a {
   color: #86a93d;
 }
 
-.single-event .event .event-contact a:hover {
+.single-event .event .event-contact a:hover, .single-event .event .event-contact a:focus {
   color: rgba(134, 169, 61, 0.7);
 }
 

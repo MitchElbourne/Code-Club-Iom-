@@ -17,6 +17,7 @@ $date = date('l, F j, Y', strtotime(get_field('event_date')));
         <a class="btn btn-reserve" href="mailto:<?php echo get_field('event_organizer_email'); ?>?subject=<?php echo get_the_title(); ?> <?php echo $date; ?>">Book your space</a>
       <?php } else { ?>
         <button class="btn btn-unavailable">Book your space</button>
+        <span class="sorry-msg">Sorry, there's no more room in this event.</span>
       <?php } ?>
       <div class="event-contact">
         <h4>Contact the event Organizer:</h4>

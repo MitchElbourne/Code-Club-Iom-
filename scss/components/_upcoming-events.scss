@@ -43,16 +43,19 @@
 .single-event {
   padding: 25px 0;
   .event-title {
-    padding: 1rem;
+    padding: 0 1rem;
   }
   .event {
     background-color: $white;
     border-radius: 0;
-    .event-title {
-      padding: 1rem 0;
-    }
     .event-datetime {
-      padding: 1rem 0;
+      padding: 0 0 2rem 0;
+      @include media_breakpoint-down(md) {
+        display: block;
+        .event-time {
+          padding: 1rem 0 0 0;
+        }
+      }
     }
     .btn-reserve {
       background-color: $light-grey;
@@ -75,11 +78,14 @@
         transition: all 100ms linear;
       }
     }
+    .sorry-msg {
+      color: rgba($booger, 0.8);
+    }
     .event-contact {
+      padding-top: 3rem;
       a {
         color: $booger;
-        &:hover {
-
+        &:hover, &:focus {
           color: rgba($booger, 0.7);
         }
       }
