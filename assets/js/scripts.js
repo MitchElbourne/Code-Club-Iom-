@@ -47,11 +47,7 @@
 jQuery(document).ready(function(jQuery) {
   // Override parent theme custom.js line 83 to stop <a> click closing navbar
   jQuery('.navbar-collapse ul li a').unbind('click');
-
-  // Override parent theme applying padding on load
-  jQuery('body').css('padding-top', 70 + "px");
-
-
+  
   // For closing the navbar when clicking outside of the container
   jQuery('body').bind('click', function(e) {
       if(jQuery(e.target).closest('.collapse').length == 0) {
@@ -72,10 +68,6 @@ jQuery(document).ready(function(jQuery) {
   }, 150));
 
 
-  function On_Resize() {
-    // Override parent theme js when the window is resized
-    jQuery('body').css('padding-top', 70 + "px");
-  };
 
   jQuery( 'p:empty' ).remove();
 });

@@ -186,6 +186,7 @@ body {
   letter-spacing: 0;
   color: #384648;
   font-family: "Nunito", sans-serif;
+  padding-top: 8rem;
 }
 
 button:hover,
@@ -374,7 +375,7 @@ a:active {
   background-color: #ac5400;
 }
 
-.upcoming-events h3 {
+.upcoming-events > h3 {
   font-size: 1.3rem;
   font-family: "Montserrat", sans-serif;
 }
@@ -442,12 +443,12 @@ a:active {
   transition: background-color 200ms ease-in;
 }
 
-.single-event {
-  padding: 25px 0;
-}
-
-.single-event .event-title {
-  padding: 0 1rem;
+.single-event > p {
+  font-size: 18px;
+  color: #9ba3a3;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
 }
 
 .single-event .event {
@@ -455,57 +456,63 @@ a:active {
   border-radius: 0;
 }
 
+.single-event .event > hr {
+  border-style: dashed;
+}
+
 .single-event .event .event-datetime {
-  padding: 0 0 2rem 0;
+  padding-bottom: 2rem;
 }
 
-@media (max-width: 991px) {
-  .single-event .event .event-datetime {
-    display: block;
-  }
-  .single-event .event .event-datetime .event-time {
-    padding: 1rem 0 0 0;
-  }
+.single-event .event .event-datetime .break {
+  border-left: 1px solid #384648;
 }
 
-.single-event .event .btn-reserve {
-  background-color: #f5f6f6;
-  transition: all 100ms linear;
+.single-event .event .event-datetime .event-date {
+  font-family: "Montserrat", sans-serif;
+  color: #384648;
+  font-size: 1.4rem;
+  font-weight: normal;
 }
 
-.single-event .event .btn-reserve:hover, .single-event .event .btn-reserve:focus {
-  color: black;
+.single-event .event .event-datetime .event-time {
+  font-family: "Montserrat", sans-serif;
+  color: #384648;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.single-event .event .cta-read-more {
+  background-color: #86a93d;
+}
+
+.single-event .event .cta-read-more:hover {
   background-color: rgba(134, 169, 61, 0.7);
-  transition: all 150ms linear;
 }
 
-.single-event .event .btn-unavailable {
-  background-color: #f5f6f6;
-  cursor: not-allowed;
-  color: rgba(0, 0, 0, 0.3);
-  transition: all 150ms linear;
+.single-event .event .unavailable {
+  background-color: #6c6c6c;
+  color: #f5f6f6;
 }
 
-.single-event .event .btn-unavailable:hover, .single-event .event .btn-unavailable:focus {
+.single-event .event .unavailable:hover, .single-event .event .unavailable:focus {
+  background-color: #6c6c6c;
+  cursor: default;
   outline: none;
-  background-color: #f5f6f6;
-  transition: all 100ms linear;
 }
 
 .single-event .event .sorry-msg {
   color: rgba(134, 169, 61, 0.8);
 }
 
-.single-event .event .event-contact {
-  padding-top: 3rem;
-}
-
-.single-event .event .event-contact a {
+.single-event .event .sorry-msg a {
   color: #86a93d;
+  transition: color 100ms linear;
 }
 
-.single-event .event .event-contact a:hover, .single-event .event .event-contact a:focus {
-  color: rgba(134, 169, 61, 0.7);
+.single-event .event .sorry-msg a:hover {
+  color: rgba(134, 169, 61, 0.4);
+  transition: color 100ms linear;
 }
 
 .input-config {
@@ -631,6 +638,22 @@ a:active {
   color: #86a93d;
   opacity: .8;
   transition: color 350ms linear;
+}
+
+.no-border {
+  border: none;
+  margin: 1rem 0 1rem 0;
+  color: #86a93d;
+}
+
+.no-border a {
+  color: #86a93d;
+  transition: color 100ms linear;
+}
+
+.no-border a:hover {
+  color: rgba(134, 169, 61, 0.8);
+  transition: color 100ms linear;
 }
 
 .post-item {

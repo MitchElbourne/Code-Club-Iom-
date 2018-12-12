@@ -28,6 +28,19 @@
     }
   }
 }
+.no-border {
+  border: none;
+  margin: 1rem 0 1rem 0;
+  color: $booger;
+  a {
+    color: $booger;
+    transition: color 100ms linear;
+    &:hover {
+      color: rgba($booger, 0.8);
+      transition: color 100ms linear;
+    }
+  }
+}
 .post-item {
   position: relative;
   @include flexbox;

@@ -1,5 +1,5 @@
 .upcoming-events {
-  h3 {
+  > h3 {
     font-size: 1.3rem;
     font-family: $Montserrat;
   }
@@ -59,52 +59,60 @@
 }
 
 .single-event {
-  padding: 25px 0;
-  .event-title {
-    padding: 0 1rem;
+  > p {
+    font-size: 18px;
+    color: $cool-grey;
+    font-weight: bold;
+    font-family: $Montserrat;
+    letter-spacing: 1.5px;
   }
   .event {
     background-color: $white;
     border-radius: 0;
+    > hr {
+      border-style: dashed;
+    }
     .event-datetime {
-      padding: 0 0 2rem 0;
-      @include media_breakpoint-down(md) {
-        display: block;
-        .event-time {
-          padding: 1rem 0 0 0;
-        }
+      padding-bottom: 2rem;
+      .break {
+        border-left: 1px solid $charcoal-grey;
+      }
+      .event-date {
+        font-family: $Montserrat;
+        color: $charcoal-grey;
+        font-size: 1.4rem;
+        font-weight: normal;
+      }
+      .event-time {
+        font-family: $Montserrat;
+        color: $charcoal-grey;
+        font-size: 1.4rem;
+        font-weight: normal;
       }
     }
-    .btn-reserve {
-      background-color: $light-grey;
-      transition: all 100ms linear;
-      &:hover, &:focus {
-        color: black;
+    .cta-read-more {
+      background-color: $booger;
+      &:hover {
         background-color: rgba($booger, 0.7);
-        transition: all 150ms linear;
       }
     }
-    .btn-unavailable {
-      background-color: $light-grey;
-      cursor: not-allowed;
-      color: rgba(black, 0.3);
-      transition: all 150ms linear;
+    .unavailable {
+      background-color: $brownish-grey;
+      color: $light-grey;
       &:hover, &:focus {
-        // color: grey;
+        background-color: $brownish-grey;
+        cursor: default;
         outline: none;
-        background-color: $light-grey;
-        transition: all 100ms linear;
       }
     }
     .sorry-msg {
       color: rgba($booger, 0.8);
-    }
-    .event-contact {
-      padding-top: 3rem;
       a {
-        color: $booger;
-        &:hover, &:focus {
-          color: rgba($booger, 0.7);
+        color: rgba($booger, 1);
+        transition: color 100ms linear;
+        &:hover {
+          color: rgba($booger, 0.4);
+          transition: color 100ms linear;
         }
       }
     }
