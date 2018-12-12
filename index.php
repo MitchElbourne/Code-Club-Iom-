@@ -43,7 +43,7 @@ get_header();
           $date = date('d.m.y', strtotime(get_the_date()));
           $image;
           if (!get_the_post_thumbnail_url()) {
-            $image = get_theme_file_uri('/assets/images/2018-Digital-Marketing.jpg');
+            $image = get_theme_file_uri('/assets/Images/Coding-008.jpg');
           } else {
             $image = get_the_post_thumbnail_url();
           }
@@ -148,7 +148,7 @@ get_header();
             if ($events) {
               while ($events->have_posts()) {
                 $events->the_post();
-                $eventdate = date('M, Y', strtotime(get_field('event_date')));
+                $eventdate = date('d M, Y', strtotime(get_field('event_date')));
                 ?>
 
                 <div class="event">
@@ -169,7 +169,7 @@ get_header();
               Sorry, there don't seem to be any upcoming events. Keep your eye on this page though, there could be one soon!
             </p>
           <?php } ?>
-          <a href="https://zen.coderdojo.com/dojos/im/douglas/douglas-iom-steam-lab" target="_blank">Check out the Code Club recent events on our Dojo</a>
+          <a href="https://zen.coderdojo.com/dojos/im/douglas/douglas-iom-steam-lab" target="_blank">Check out all the Code Club upciming and past events in our Dojo</a>
         </div><!-- upcoming events -->
       </div><!-- col -->
   </div><!-- container -->

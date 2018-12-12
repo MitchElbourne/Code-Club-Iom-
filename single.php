@@ -13,7 +13,7 @@ get_header();
             $date = date('d.m.y', strtotime(get_the_date()));
             $image;
             if (!get_the_post_thumbnail_url()) {
-              $image = get_theme_file_uri('2018-Digital-Marketing.jpeg');
+              $image = get_theme_file_uri('/assets/Images/Coding-008.jpg');
             } else {
               $image = get_the_post_thumbnail_url();
             }

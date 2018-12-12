@@ -2,7 +2,7 @@
 get_header();
 
 $radioButtons = get_field('event_availability');
-$date = date('F j, Y', strtotime(get_field('event_date')));
+$date = date('j F, Y', strtotime(get_field('event_date')));
 ?>
   <div class="container upcoming-events single-event">
     <p>UPCOMING EVENT</p>

@@ -752,8 +752,21 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   }
 }
 
-.post-item.first-post .post-meta {
+.post-item .post-meta {
   margin-top: 24px;
+}
+
+.post-item .post-meta .post-meta-content {
+  display: flex;
+}
+
+.post-item .post-meta .post-meta-content img {
+  height: 100%;
+}
+
+.post-item .post-meta .post-meta-content a {
+  align-content: center;
+  display: flex;
 }
 
 .post-item .post-thumbnail, .post-item .wp-post-image {

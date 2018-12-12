@@ -1,10 +1,7 @@
 <?php
 get_header();
 ?>
-<!-- blog title -->
 
-<!-- <h1 class="index_titles blog single"><?php printf( __( 'Search Results for: %s', 'one-page' ), '' . get_search_query() . '' ); ?></h1> -->
-<!-- blog title ends -->
 <div class="blog_pages_wrapper default_bg search-container">
   <div class="container">
     <div class="row">
@@ -22,7 +19,7 @@ get_header();
           }
           $image;
           if (!get_the_post_thumbnail_url()) {
-            $image = get_theme_file_uri('/assets/images/2018-Digital-Marketing.jpg');
+            $image = get_theme_file_uri('/assets/Images/Coding-008.jpg');
           } else {
             $image = get_the_post_thumbnail_url();
           }
@@ -59,28 +56,23 @@ get_header();
             </div><!-- post-meta -->
           </article><!-- article -->
           <?php
-        }
+        } ?>
+        <div class="pagination">
+        <div class="prev"><?php previous_posts_link('Previous posts', $postslist->max_num_pages); ?></div>
+        <div class="next"><?php next_posts_link('Next posts', $postslist->max_num_pages); ?></div>
+        </div>
+        <?php
   		else :
   			?>
-  		<article id="post-0" class="post no-results not-found">
-  			<header class="entry-header">
-  				<h1 class="entry-title">
-  					<?php _e( 'Nothing Found', 'one-page' ); ?>
-  				</h1>
-  			</header>
-  			<!-- .entry-header -->
-  			<div class="entry-content">
-  				<p>
-  					<?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'one-page' ); ?>
-  				</p>
-  			</div>
-  			<!-- .entry-content -->
-  		</article>
-    	<?php endif; ?>
-        <div class="pagination">
-          <div class="prev"><?php previous_posts_link('Previous posts', $postslist->max_num_pages); ?></div>
-          <div class="next"><?php next_posts_link('Next posts', $postslist->max_num_pages); ?></div>
-        </div>
+    		<article id="post-0" class="post no-results not-found">
+    			<h1>We couldn't find what you were looking for!</h1>
+    			<!-- .entry-header -->
+    			<div class="entry-content">
+    				<p>Nothing matched your search criteria, please try again with different keywords</p>
+    			</div>
+    			<!-- .entry-content -->
+    		</article>
+    	 <?php endif; ?>
         <!--End Page-->
       </div>
       <!--Sidebar-->

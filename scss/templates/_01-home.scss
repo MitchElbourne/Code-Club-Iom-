@@ -83,8 +83,18 @@
         display: block;
       }
     }
-    .post-meta {
-      margin-top: 24px;
+  }
+  .post-meta {
+    margin-top: 24px;
+    .post-meta-content {
+      display: flex;
+      img {
+        height: 100%;
+      }
+      a {
+        align-content: center;
+        display: flex;
+      }
     }
   }
   .post-thumbnail, .wp-post-image {
