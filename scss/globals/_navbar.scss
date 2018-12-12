@@ -2,14 +2,12 @@
   box-shadow: 0 0 5px 0 rgba(black, 0.2);
   transition: box-shadow 300ms linear;
 }
-
 .header {
   .navbar {
     box-shadow: none;
     transition: box-shadow 150ms linear;
   }
 }
-
 .navbar {
   @include media-breakpoint-up(md) {
     min-height: 84px;

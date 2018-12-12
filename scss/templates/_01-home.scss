@@ -2,29 +2,29 @@
 .blog-articles {
   display: flex;
   flex-wrap: wrap;
-  .pagination {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    border-top: 2px solid rgba($black, 0.2);
-    border-radius: 0;
-    margin: 0 1rem 5rem 1rem;
-    div {
-      margin: 2rem 0 0 0;
-    }
-    a {
-      font-size: 1.5rem;
-      line-height: 24px;
-      color: $silver-two;
-      font-family: $Montserrat;
-      font-weight: 700;
-      font-style: normal;
-      transition: color 300ms ease-out;
-      &:hover {
-        color: $booger;
-        opacity: .8;
-        transition: color 350ms linear;
-      }
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 2px solid rgba($black, 0.2);
+  border-radius: 0;
+  margin: 0 1rem 5rem 1rem;
+  div {
+    margin: 2rem 0 0 0;
+  }
+  a {
+    font-size: 1.5rem;
+    line-height: 24px;
+    color: $silver-two;
+    font-family: $Montserrat;
+    font-weight: 700;
+    font-style: normal;
+    transition: color 300ms ease-out;
+    &:hover {
+      color: $booger;
+      opacity: .8;
+      transition: color 350ms linear;
     }
   }
 }

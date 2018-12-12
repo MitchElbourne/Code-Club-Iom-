@@ -374,15 +374,25 @@ a:active {
   background-color: #ac5400;
 }
 
+.upcoming-events h3 {
+  font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+}
+
 .upcoming-events .no-event-listings {
   color: rgba(0, 0, 0, 0.5);
 }
 
 .upcoming-events .event {
-  background-color: #f5f6f6;
-  border-radius: 8px;
-  padding: 1rem 1rem 2rem 1rem;
+  padding-bottom: 2rem;
   margin: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-style: dashed;
+}
+
+.upcoming-events .event .event-title {
+  font-size: 1.8rem;
+  color: #86a93d;
 }
 
 .upcoming-events .event .event-datetime {
@@ -391,36 +401,45 @@ a:active {
 }
 
 .upcoming-events .event .event-datetime .event-date {
-  color: rgba(0, 0, 0, 0.3);
-  font-weight: bold;
+  color: #384648;
   margin: 0;
-  padding-right: 1rem;
+  padding-right: 0.4rem;
+  font-size: 18px;
 }
 
 .upcoming-events .event .event-datetime .break {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  height: 1rem;
+  border-left: 1px solid #384648;
+  height: 1.2rem;
   align-self: center;
 }
 
 .upcoming-events .event .event-datetime .event-time {
-  color: rgba(0, 0, 0, 0.3);
-  font-weight: bold;
+  color: #384648;
   margin: 0;
-  padding-left: 1rem;
+  padding-left: 0.4rem;
+  font-size: 18px;
 }
 
 .upcoming-events .event .event-content {
   padding-bottom: 0.66rem;
+  color: #6c6c6c;
 }
 
 .upcoming-events .event .cta-read-more {
-  font-size: 18px;
   line-height: 16px;
-  color: #86a93d;
+  padding: 0.7rem 1rem;
+  color: #ffffff;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-weight: bold;
+  background-color: #9ba3a3;
+  border: none;
+  border-radius: 1.6rem;
+  transition: background-color 200ms ease-out;
+}
+
+.upcoming-events .event .cta-read-more:hover {
+  background-color: #384648;
+  transition: background-color 200ms ease-in;
 }
 
 .single-event {
@@ -575,13 +594,17 @@ a:active {
   width: 48px;
 }
 
+.search-container {
+  padding-top: 4rem;
+}
+
 /* SECTION : News & Events */
 .blog-articles {
   display: flex;
   flex-wrap: wrap;
 }
 
-.blog-articles .pagination {
+.pagination {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -590,11 +613,11 @@ a:active {
   margin: 0 1rem 5rem 1rem;
 }
 
-.blog-articles .pagination div {
+.pagination div {
   margin: 2rem 0 0 0;
 }
 
-.blog-articles .pagination a {
+.pagination a {
   font-size: 1.5rem;
   line-height: 24px;
   color: #cdd1d1;
@@ -604,7 +627,7 @@ a:active {
   transition: color 300ms ease-out;
 }
 
-.blog-articles .pagination a:hover {
+.pagination a:hover {
   color: #86a93d;
   opacity: .8;
   transition: color 350ms linear;
