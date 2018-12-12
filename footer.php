@@ -1,4 +1,4 @@
-  <section id="contact" class="contact-section">
+  <footer id="contact" class="contact-section">
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-3 col-lg-3">
@@ -51,7 +51,7 @@
         </div><!-- col -->
       </div><!-- row -->
     </div><!-- container -->
-  </section><!-- SECTION : contact -->
+  </footer><!-- SECTION : contact -->
 
 <?php
 wp_footer();

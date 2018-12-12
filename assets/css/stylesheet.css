@@ -329,6 +329,10 @@ a:hover, a:focus {
   font-size: 13px;
 }
 
+footer {
+  margin-top: 5rem;
+}
+
 .contact-section {
   font-family: "Nunito", sans-serif;
   font-size: 30px;
@@ -348,6 +352,22 @@ a:hover, a:focus {
   font-weight: 700;
   font-style: normal;
   border-radius: 24px;
+}
+
+input[type="submit"] {
+  background-color: #86a93d;
+  color: #ffffff;
+  border: none;
+  border-radius: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 200ms linear;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: rgba(134, 169, 61, 0.7);
+  transition: background-color 200ms linear;
 }
 
 #mc_signup_submit {
@@ -536,10 +556,6 @@ a:hover, a:focus {
   }
 }
 
-.single-event .no-border {
-  padding-bottom: 4rem;
-}
-
 .input-config {
   border-radius: 0;
   height: 60px;
@@ -642,7 +658,7 @@ a:hover, a:focus {
   width: 100%;
   border-top: 2px solid rgba(52, 68, 82, 0.2);
   border-radius: 0;
-  margin: 0 1rem 5rem 1rem;
+  margin: 0 1rem 0 1rem;
 }
 
 .pagination div {
@@ -795,12 +811,16 @@ a:hover, a:focus {
 }
 
 .post-item .post-categories ul li {
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
   padding: 0 0.5rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .post-item .post-categories ul li:last-of-type {
   border: none;
+}
+
+.post-item .post-categories ul li:first-of-type {
+  padding-left: 0;
 }
 
 .post-item .post-categories ul li a {

@@ -172,11 +172,11 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 
 			// Set title from item to the $atts array - if title is empty then
 			// default to item title.
-			if ( empty( $item->attr_title ) ) {
-				$atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : '';
-			} else {
-				$atts['title'] = $item->attr_title;
-			}
+			// if ( empty( $item->attr_title ) ) {
+			// 	$atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : '';
+			// } else {
+			// 	$atts['title'] = $item->attr_title;
+			// }
 
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
 			$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
@@ -385,7 +385,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 		 * Supported linkmods: .disabled, .dropdown-header, .dropdown-divider, .sr-only
 		 * Supported iconsets: Font Awesome 4/5, Glypicons
 		 *
-		 * 
+		 *
 		 *
 		 * @since 4.0.0
 		 *
