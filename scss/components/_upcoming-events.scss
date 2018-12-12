@@ -107,6 +107,7 @@
     }
     .sorry-msg {
       color: rgba($booger, 0.8);
+      padding-left: 1rem;
       a {
         color: rgba($booger, 1);
         transition: color 100ms linear;
@@ -115,6 +116,14 @@
           transition: color 100ms linear;
         }
       }
+      @include media-breakpoint-down(sm) {
+        display: block;
+        padding-left: 0.4rem;
+        margin-top: 1rem;
+      }
     }
+  }
+  .no-border {
+    padding-bottom: 4rem;
   }
 }

@@ -13,7 +13,7 @@ $date = date('F j, Y', strtotime(get_field('event_date')));
         <span class="break"></span>
         <h3 class="event-time"><?php the_field('event_time_start'); ?> to <?php the_field('event_time_end'); ?></h3>
       </div>
-      <?php if (get_field('event_availability') == 'Available Space') { ?>
+      <?php if (get_field('event_availability') == 'Available Space' && get_field('event_description') != '') { ?>
         <a class="btn cta-read-more" target="_blank" href="<?php the_field('event_dojo_url'); ?>">Book your spot</a>
       <?php } ?>
       <hr />
@@ -29,8 +29,29 @@ $date = date('F j, Y', strtotime(get_field('event_date')));
     <!-- Event Pagination -->
     <div class="pagination no-border">
       <?php
-        echo next_post('%', 'Next Event: ');
-      ?>
+        $thisDate = date('Ymd', strtotime(get_field('event_date')));
+
+        $nextEvent = new WP_Query(array(
+          'post_type' => 'event',
+          'posts_per_page' => 1,
+          'order' => 'ASC',
+          'orderby' => 'meta_value_num',
+          'order' => 'ASC',
+          'meta_query' => array(
+            array(
+            'key' => 'event_date',
+            'compare' => '>',
+            'value' => $thisDate,
+            'type' => 'numberic'
+            )
+          ),
+        ));
+
+        if ($nextEvent->have_posts()) {
+          $nextEvent->the_post();
+          ?>
+          <a href="<?php the_permalink(); ?>">Next Event: <?php the_title(); ?></a>
+        <?php } ?>
     </div>
   </div>
 

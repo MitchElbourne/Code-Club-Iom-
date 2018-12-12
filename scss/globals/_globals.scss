@@ -27,3 +27,12 @@ a:active{
     padding-left: 0;
   }
 }
+
+a {
+  color: $booger;
+  transition: color 200ms linear;
+  &:hover, &:focus {
+    color: rgba($booger, 0.7);
+    transition: color 200ms linear;
+  }
+}

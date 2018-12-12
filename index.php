@@ -118,7 +118,7 @@ get_header();
 
           </div><!-- row -->
         </div><!-- row -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
           <?php dynamic_sidebar('primary-widget-area'); ?>
           <div class="upcoming-events">
             <h3>Upcoming Events</h3>
@@ -169,6 +169,7 @@ get_header();
               Sorry, there don't seem to be any upcoming events. Keep your eye on this page though, there could be one soon!
             </p>
           <?php } ?>
+          <a href="https://zen.coderdojo.com/dojos/im/douglas/douglas-iom-steam-lab" target="_blank">Check out the Code Club recent events on our Dojo</a>
         </div><!-- upcoming events -->
       </div><!-- col -->
   </div><!-- container -->

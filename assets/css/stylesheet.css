@@ -208,6 +208,16 @@ a:active {
   padding-left: 0;
 }
 
+a {
+  color: #86a93d;
+  transition: color 200ms linear;
+}
+
+a:hover, a:focus {
+  color: rgba(134, 169, 61, 0.7);
+  transition: color 200ms linear;
+}
+
 #mainNav.scrolled {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   transition: box-shadow 300ms linear;
@@ -341,19 +351,21 @@ a:active {
 }
 
 #mc_signup_submit {
-  background-color: #86a93d;
-  width: 200px;
-  height: 50px;
-  border-radius: 20px;
+  width: 150px;
   margin-top: 1rem;
+  padding: 0.5rem;
   border: none;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.3rem;
+  border-radius: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #86a93d;
+  transition: background-color 0.25s ease-out;
 }
 
 #mc_signup_submit:hover, #mc_signup_submit:focus {
   background-color: #597129;
-  transition: background-color 0.25s ease-out;
+  transition: background-color 0.25s ease-in;
 }
 
 #mc_signup_submit:active {
@@ -503,6 +515,7 @@ a:active {
 
 .single-event .event .sorry-msg {
   color: rgba(134, 169, 61, 0.8);
+  padding-left: 1rem;
 }
 
 .single-event .event .sorry-msg a {
@@ -513,6 +526,18 @@ a:active {
 .single-event .event .sorry-msg a:hover {
   color: rgba(134, 169, 61, 0.4);
   transition: color 100ms linear;
+}
+
+@media (max-width: 767px) {
+  .single-event .event .sorry-msg {
+    display: block;
+    padding-left: 0.4rem;
+    margin-top: 1rem;
+  }
+}
+
+.single-event .no-border {
+  padding-bottom: 4rem;
 }
 
 .input-config {
